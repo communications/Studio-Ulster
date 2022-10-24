@@ -1,0 +1,105 @@
+footer {
+  background-color: black;
+  color: white;
+  padding: 3em 0em 1em;
+  border-top: 5px solid white;
+
+  img {
+    height: 80px;
+    margin-bottom: 1em;
+  }
+
+  .cell {
+    margin: 0px;
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  a {
+    color: white;
+
+
+  }
+
+  ul {
+    list-style: none;
+    margin-left: 0px;
+
+    a {
+      font-size: 18px;
+      margin-bottom: 10px;
+
+      &:hover {
+        color: white;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .sub-footer {
+    border-top: 2px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1em;
+    margin-top: 1em;
+
+    a,
+    p {
+      opacity: 0.5;
+      margin-bottom: 0px;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    a {
+      &:first-child {
+        border-right: 2px solid white;
+        padding-right: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .ulster-logo {
+    max-width: 120px;
+    margin-left: 29px;
+    border-left: 2px solid white;
+    padding-left: 20px;
+  }
+
+  .social-media {
+    display: inline-block;
+    float: right;
+    margin-left: 20px;
+
+    a {
+      border: 0px !important;
+      padding-right: 0px !important;
+      margin-right: 0px !important;
+    }
+
+    .fab {
+      font-size: 23px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@include breakpoint (medium down) {
+  footer .social-media {
+    padding: 2em 0em;
+  }
+}
+
+@include breakpoint (small only) {
+  footer img {
+    width: 117px;
+  }
+
+  footer .text-right {
+    text-align: left;
+  }
+}

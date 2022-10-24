@@ -1,0 +1,91 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: p22-underground, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: uppercase;
+
+  b,
+  strong {
+    font-family: p22-underground, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+}
+
+h1 {
+  font-size: 74px;
+  line-height: 74px;
+  margin: 10px 0px;
+
+  p {
+    font-size: 74px;
+    line-height: 74px;
+
+  }
+}
+
+h1.heading {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 65px;
+  line-height: 65px;
+
+  p {
+    font-size: 65px;
+    line-height: 65px;
+  }
+}
+
+h3 {
+  font-size: 21px;
+  line-height: 31px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  font-weight: normal;
+
+  a {
+    font-family: p22-underground, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.h2-large {
+  font-size: 95px;
+  line-height: 95px;
+
+  p {
+    font-size: 95px;
+    line-height: 95px;
+  }
+}
+
+.text-h3 {
+  text-transform: none;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 38px;
+  margin-bottom: 20px;
+
+
+}
+
+
+.sub-hero {
+  h1 {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
