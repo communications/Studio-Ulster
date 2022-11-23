@@ -44,9 +44,11 @@ h2 {
 }
 
 h3 {
-  font-size: 21px;
-  line-height: 31px;
-  font-weight: bold;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 38px;
+  margin-bottom: 20px;
 }
 
 p {
@@ -72,15 +74,7 @@ p {
   }
 }
 
-.text-h3 {
-  text-transform: none;
-  font-weight: normal;
-  font-size: 28px;
-  line-height: 38px;
-  margin-bottom: 20px;
 
-
-}
 
 
 .sub-hero {
