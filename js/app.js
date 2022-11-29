@@ -31,13 +31,15 @@ $(document).ready(function () {
     }
   });
 
-
-  var iframe = $('#full-video2')[0];
-  var player = new Vimeo.Player(iframe);
+});
 
   //Play Button on the hero
-  $('.play-button-1').bind('click keypress', function (e) {
+  $('.play-button').bind('click keypress', function (e) {
     e.preventDefault();
+
+    var iframe = $(this).siblings(".vimeo-wrapper").children("iframe")[0];
+    var player = new Vimeo.Player(iframe);
+
     $(this).fadeOut();
     $('.hide-video-1').fadeIn();
     console.log('play-button-1');
@@ -51,48 +53,22 @@ $(document).ready(function () {
    
   });
 
-  $('.hide-video-1').click(function () {
+  $('.hide-video').bind('click keypress', function (e) {
+    e.preventDefault();
+
+    var iframe = $(this).siblings(".vimeo-wrapper").children("iframe")[0];
+    var player = new Vimeo.Player(iframe);
+
     $('.play-button-1').fadeIn();
     $(this).hide();
     $('.video-container-1 ').removeClass('enlarge-video');
     $('.play-video-1').show();
+    
     player.ready().then(function() {
-      player.setMuted(true);
-      player.unload();
-
-      });
-  });
-
-
-
-  var iframe2 = $('#full-video3')[0];
-  var player2 = new Vimeo.Player(iframe2);
-
-  //Play Button on the hero
-  $('.play-button-2').click(function () {
-    $(this).fadeOut();
-    $('.hide-video-2').fadeIn();
-    console.log('play-button-2');
-    $('.video-container-2 ').addClass('enlarge-video');
-    player2.ready().then(function() {
-      player2.setMuted(false);
-      player2.play();
+      player.setMuted(false);
+      player.play();
     });
   });
-
-  $('.hide-video-2').click(function () {
-    $('.play-button-2').fadeIn();
-    $(this).hide();
-    $('.video-container-2 ').removeClass('enlarge-video');
-    $('.play-video-2').show();
-    player2.ready().then(function() {
-      player2.setMuted(true);
-      player2.unload();
-
-      });
-  });
-
-});
 
 
 // Sticky hamburger menu on tablet and mobile.
@@ -105,12 +81,6 @@ $(document).ready(function () {
       $('header').removeClass('fixed-header');
     }
   })
-
-
-
-
-
-
 });
 
 
@@ -119,9 +89,10 @@ $(document).ready(function () {
 $(document).ready(function () {
   AOS.init({
     offset: 200, // offset (in px) from the original trigger point
-    duration: 800, // values from 0 to 3000, with step 50ms
+    duration: 600, // values from 0 to 3000, with step 50ms
     easing: 'linear', // default easing for AOS animations
     once: true,
+    delay:0,
     mirror: true,
     disable: "mobile",
 
