@@ -141,13 +141,13 @@ window.addEventListener('load', function () {
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 5,
       spaceBetween: 20,
-      speed: 600,
+      speed: 1000,
       // freeMode: true,
       allowTouchMove: true,
-      // autoplay: {
-      //   delay: 4500,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
       loop: true,
       // loopedSlides: 50,
       centeredSlides: true,
