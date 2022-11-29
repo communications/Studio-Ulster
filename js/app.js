@@ -32,8 +32,8 @@ $(document).ready(function () {
   });
 
 
-  var iframe = $('#full-video2')[0],
-    player = $f(iframe);
+  var iframe = $('#full-video2')[0];
+  var player = new Vimeo.Player(iframe);
 
   //Play Button on the hero
   $('.play-button-1').bind('click keypress', function (e) {
@@ -65,8 +65,8 @@ $(document).ready(function () {
 
 
 
-  var iframe2 = $('#full-video3')[0],
-    player2 = $f(iframe2);
+  var iframe2 = $('#full-video3')[0];
+  var player2 = new Vimeo.Player(iframe2);
 
   //Play Button on the hero
   $('.play-button-2').click(function () {
