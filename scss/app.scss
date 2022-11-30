@@ -65,8 +65,9 @@
 @include motion-ui-animations;
 
 
-// Studi Ulster
+@import url(https://unpkg.com/swiper/swiper-bundle.min.css);
 
+// Studio Ulster
 @import 'header';
 @import 'footer';
 @import 'global';
