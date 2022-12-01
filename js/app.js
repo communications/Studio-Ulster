@@ -269,9 +269,19 @@ window.addEventListener('load', function () {
   });
 
 
-
-
 })
+
+
+var swiper2 = new Swiper(".quote-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 60,
+  speed: 600,
+  allowTouchMove: true,
+  pagination: {
+    el: ".swiper-pagination-2",
+    clickable: true,
+  },
+});
 
 
 
