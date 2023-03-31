@@ -141,7 +141,7 @@ window.addEventListener('load', function () {
       spaceBetween: 20,
       speed: 600,
       allowTouchMove: true,
-      loop: true,
+      loop: false,
       centeredSlides: true,
       pagination: {
         el: ".swiper-pagination",
