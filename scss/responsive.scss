@@ -284,6 +284,8 @@
     background-color: white;
     width: 61px;
     height: 61px;
+    border-radius: 0px;
+    padding: 20px;
   }
 
   .swiper-button-next {
@@ -292,6 +294,8 @@
     background-color: white;
     width: 61px;
     height: 61px;
+    border-radius: 0px;
+    padding: 20px;
   }
 
   .swiper-button-next:after,
@@ -325,8 +329,8 @@
   .h2-large,
   h2 p,
   h2 {
-    font-size: 34px;
-    line-height: 39px;
+    font-size: 26px;
+    line-height: 32px;
   }
 
   .hide-video .close-me {

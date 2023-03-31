@@ -1310,6 +1310,12 @@ ol {
 .news-tile {
   margin-top: 2em;
 
+  a {
+    &:hover {
+      color: white;
+    }
+  }
+
   .content {
     background-color: #151515;
     border-radius: 0px 0px 8px 8px;
@@ -1318,6 +1324,7 @@ ol {
       font-size: 25px;
       line-height: 28px;
       font-weight: bold;
+      text-transform: none;
     }
 
     p {

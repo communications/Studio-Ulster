@@ -431,6 +431,10 @@ p a {}
   margin-top: 10em;
 }
 
+.video-section {
+  text-align: center;
+}
+
 a {
   &:hover {
     color: white;
@@ -610,9 +614,11 @@ a {
 
 
 .swiper-button-prev {
-  left: 46%;
+  left: 3em;
+  background-color: white;
   bottom: 0;
-  top: 40px;
+  padding: 38px;
+  border-radius: 40px;
   right: initial;
   width: 30px;
   height: 30px;
@@ -629,9 +635,11 @@ a {
 }
 
 .swiper-button-next {
-  right: 46%;
+  right: 3em;
+  background-color: white;
   bottom: 0;
-  top: 40px;
+  padding: 38px;
+  border-radius: 40px;
   left: initial;
   width: 30px;
   height: 30px;

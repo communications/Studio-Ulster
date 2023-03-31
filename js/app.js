@@ -110,166 +110,60 @@ window.addEventListener('load', function () {
     $(this).html(text.join(' '));
   })
 
-  if ($(window).width() < 560) {
+
+  if (screen.width < 960) {
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 0.8,
       spaceBetween: 20,
       speed: 600,
       allowTouchMove: true,
       loop: true,
-
       centeredSlides: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: false,
       },
-
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      on: {
-        init: function () {
-          $('.text-1').show();
-        },
 
-
-      }
-    });
-  }
-  else {
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 5,
-      spaceBetween: 20,
-      speed: 1000,
-      // freeMode: true,
-      allowTouchMove: true,
       autoplay: {
         delay: 4000,
         disableOnInteraction: false,
       },
+    });
+  }
+  else {
+
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      speed: 600,
+      allowTouchMove: true,
       loop: true,
-      // loopedSlides: 50,
       centeredSlides: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: false,
       },
-
-      breakpoints: {
-
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 20,
-        },
-      },
-
-
-      loopFillGroupWithBlank: false,
-      reverseDirection: false,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
 
-      on: {
-
-        init: function () {
-          $('.text-1').show();
-        },
-
-        // do also on init
-        // slideChange: darkNav,   // is this needed?
-
-        slideChange: function () {
-          var activeIndex = this.activeIndex;
-          var realIndex = this.slides.eq(activeIndex).attr('data-swiper-slide-index');
-          $('.swiper-slide').removeClass('swiper-slide-nth-prev-2 swiper-slide-nth-next-2');
-          $('.swiper-slide').removeClass('swiper-slide-nth-prev-3');
-          $('.swiper-slide').removeClass('swiper-slide-nth-next-3');
-          $('.swiper-slide[data-swiper-slide-index="' + realIndex + '"]').prev().prev().addClass('swiper-slide-nth-prev-2');
-          $('.swiper-slide[data-swiper-slide-index="' + realIndex + '"]').next().next().addClass('swiper-slide-nth-next-2');
-
-          $('.swiper-slide[data-swiper-slide-index="' + realIndex + '"]').prev().prev().prev().addClass('swiper-slide-nth-prev-3');
-          $('.swiper-slide[data-swiper-slide-index="' + realIndex + '"]').next().next().next().addClass('swiper-slide-nth-next-3');
-
-
-
-        },
-
-
-
-      }
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
     });
   }
 
 
 
-
-
-
-  swiper.on('slideChange', function () {
-    if ($('.swiper-slide.swiper-slide-active').hasClass('swiper-text-1')) { // `this` rather?
-      // if ( $(this).find('.swiper-slide-active').hasClass('swiper-text-1') ) {
-      console.log('test');
-      $('.text-2').fadeIn();
-
-      $('.text-1').hide();
-      $('.text-3').hide();
-      $('.text-4').hide();
-      $('.text-5').hide();
-      $('.text-5').hide();
-
-    } else if ($('.swiper-slide.swiper-slide-active').hasClass('swiper-text-2')) {
-      $('.text-3').fadeIn();
-
-      $('.text-1').hide();
-      $('.text-2').hide();
-      $('.text-4').hide();
-      $('.text-5').hide();
-      $('.text-6').hide();
-
-    } else if ($('.swiper-slide.swiper-slide-active').hasClass('swiper-text-3')) {
-      $('.text-4').fadeIn();
-
-      $('.text-2').hide();
-      $('.text-1').hide();
-      $('.text-3').hide();
-      $('.text-5').hide();
-      $('.text-6').hide();
-
-    } else if ($('.swiper-slide.swiper-slide-active').hasClass('swiper-text-4')) {
-      $('.text-5').fadeIn();
-      $('.text-2').hide();
-      $('.text-3').hide();
-      $('.text-1').hide();
-      $('.text-4').hide();
-      $('.text-6').hide();
-    } else if ($('.swiper-slide.swiper-slide-active').hasClass('swiper-text-5')) {
-      $('.text-6').fadeIn();
-      $('.text-2').hide();
-      $('.text-3').hide();
-      $('.text-4').hide();
-      $('.text-1').hide();
-      $('.text-5').hide();
-    } else if ($('.swiper-slide.swiper-slide-active').hasClass('swiper-text-6')) {
-      $('.text-1').fadeIn();
-      $('.text-2').hide();
-      $('.text-3').hide();
-      $('.text-4').hide();
-      $('.text-5').hide();
-      $('.text-6').hide();
-    } else {
-      $('.slide-text').fadeOut();
-    }
+    
+  
   });
-
-
-})
 
 
 var swiper2 = new Swiper(".quote-swiper", {
